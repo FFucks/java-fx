@@ -13,5 +13,4 @@ public class Controller {
         System.out.println("Click");
         button.setDisable(false);
     }
-
 }
