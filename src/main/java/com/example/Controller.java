@@ -1,11 +1,17 @@
 package com.example;
 
-import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 
 public class Controller {
 
+    @FXML
+    private Button button;
 
-    public void handleClick(ActionEvent actionEvent) {
-
+    @FXML
+    private void handleClick() {
+        System.out.println("Click");
+        button.setDisable(false);
     }
+
 }
