@@ -27,7 +27,6 @@ public class ContactController {
     @FXML
     public void initialize() {
 
-        // 👇 Bind columns to Contact fields
         idColumn.setCellValueFactory(data -> new SimpleLongProperty(
                         data.getValue().getId()
                 ).asObject());
@@ -81,27 +80,6 @@ public class ContactController {
         }
     }
 
-    /*@FXML
-    private void saveContact() throws Exception {
-
-        Contact selected = table.getSelectionModel().getSelectedItem();
-
-        if (selected == null) {
-            repository.save(new Contact(
-                    nameField.getText(),
-                    phoneField.getText(),
-                    emailField.getText()
-            ));
-        } else {
-            selected.setName(nameField.getText());
-            selected.setPhone(phoneField.getText());
-            selected.setEmail(emailField.getText());
-            repository.update(selected);
-        }
-
-        refreshTable();
-        clearFields();
-    }*/
 
     @FXML
     private void deleteContact() {
@@ -118,16 +96,6 @@ public class ContactController {
         }
     }
 
-    /*@FXML
-    private void deleteContact() throws Exception {
-        Contact selected = table.getSelectionModel().getSelectedItem();
-        if (selected != null) {
-            repository.delete(selected.getId());
-            refreshTable();
-            clearFields();
-        }
-    }*/
-
     private void refreshTable() {
         try {
             contacts.setAll(repository.findAll());
@@ -136,15 +104,6 @@ public class ContactController {
             e.printStackTrace();
         }
     }
-
-    /*private void refreshTable() {
-        try {
-            contacts.setAll(repository.findAll());
-            table.setItems(contacts);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }*/
 
     private void clearFields() {
         nameField.clear();
