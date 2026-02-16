@@ -5,6 +5,6 @@
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.example.Controller">
 
-    <Button text="Clique aqui" onAction="#handleClick"/>
+    <Button text="Click" onAction="#handleClick"/>
 
 </VBox>
