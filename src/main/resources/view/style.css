@@ -1,0 +1,18 @@
+.root {
+    -fx-font-family: "Segoe UI";
+    -fx-background-color: #f5f6fa;
+}
+
+.form-container {
+    -fx-padding: 20;
+    -fx-background-color: white;
+}
+
+.button {
+    -fx-background-color: #4078c0;
+    -fx-text-fill: white;
+}
+
+.button:hover {
+    -fx-background-color: #2f5f9e;
+}
