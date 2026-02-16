@@ -6,6 +6,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.util.Objects;
+
 public class ContactApp extends Application {
 
     @Override
@@ -18,8 +20,8 @@ public class ContactApp extends Application {
 
         Scene scene = new Scene(loader.load(), 800, 600);
 
-        /*scene.getStylesheets().add(
-                getClass().getResource("/view/style.css").toExternalForm());*/
+        scene.getStylesheets().add(
+                Objects.requireNonNull(getClass().getResource("/view/style.css")).toExternalForm());
 
         stage.setTitle("Contact Manager");
         stage.setScene(scene);
